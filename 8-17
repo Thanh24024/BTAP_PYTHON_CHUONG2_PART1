@@ -1,0 +1,146 @@
+Bài 8, 9:
+import math
+
+a = float(input("Nhập cạnh tam giác: "))
+
+p = (3*a)/2
+
+S = math.sqrt(p*((p-a)**3))
+
+print("Diện tích tam giác đều là: ", S)
+
+Bài 10: 
+length = float(input("Nhập vào chiều dài căn phòng: "))
+width = float(input("Nhập vào chiều rộng của căn phòng: "))
+
+S = length * width
+
+print("Diện tích căn phòng: ", S)
+
+Bài 11: 
+length = float(input("Nhập vào chiều dài cánh đồng(m): "))
+width = float(input("Nhập vào chiều rộng của căn đồng(m): "))
+
+S = (length * width)/43.56
+
+print("Diện tích căn phòng: ", S, "mẫu Anh")
+
+Bài 12:
+# Nhập chi phí bữa ăn
+meal_cost = float(input("Nhập chi phí bữa ăn: "))
+
+# Tính thuế và tiền boa
+tax = meal_cost * 0.05
+tip = meal_cost * 0.18
+total = meal_cost + tax + tip
+
+# Hiển thị kết quả với 2 chữ số thập phân
+print("Tiền bữa ăn: {:.2f}".format(meal_cost))
+print("Thuế (5%): {:.2f}".format(tax))
+print("Tiền boa (18%): {:.2f}".format(tip))
+print("Tổng cộng: {:.2f}".format(total))
+
+Bài 13:
+# Nhập số nguyên dương n
+n = int(input("Nhập số nguyên dương n: "))
+
+# Kiểm tra n hợp lệ
+if n > 0:
+    total = n * (n + 1) // 2   # dùng // vì tổng chắc chắn là số nguyên
+    print("Tổng các số nguyên từ 1 đến", n, "là:", total)
+else:
+    print("Vui lòng nhập một số nguyên dương!")
+
+Bài 14:
+import math
+
+# Nhập 2 số nguyên
+a = int(input("Nhập số nguyên a: "))
+b = int(input("Nhập số nguyên b: "))
+
+# Tính toán
+print("Tổng a + b =", a + b)
+print("Hiệu a - b =", a - b)
+print("Tích a * b =", a * b)
+
+# Thương và phần dư (nếu b != 0)
+if b != 0:
+    print("Thương a / b =", a / b)
+    print("Phần dư a % b =", a % b)
+else:
+    print("Không thể chia cho 0")
+
+# log10(a) (nếu a > 0)
+if a > 0:
+    print("log10(a) =", math.log10(a))
+else:
+    print("Không thể tính log10(a) vì a <= 0")
+
+# a^b
+print("a^b =", a ** b)
+
+Bài 15: 
+# Hằng số
+C = 4.186  # J/g°C
+J_to_kWh = 2.777e-7
+cost_per_kWh = 8.9  # cent
+
+# Nhập dữ liệu
+M = float(input("Nhập khối lượng nước (gram): "))
+delta_T = float(input("Nhập độ thay đổi nhiệt độ ΔT (°C): "))
+
+if delta_T > 0:
+    # Tính năng lượng Q (Joules)
+    Q = M * C * delta_T
+
+    # Đổi sang kWh
+    Q_kWh = Q * J_to_kWh
+
+    # Tính chi phí
+    cost = Q_kWh * cost_per_kWh
+
+    # In kết quả
+    print("Năng lượng cần thiết: {:.2f} J".format(Q))
+    print("Năng lượng quy đổi: {:.6f} kWh".format(Q_kWh))
+    print("Chi phí: {:.4f} cent".format(cost))
+else:
+    print("ΔT phải lớn hơn 0 để tính năng lượng.")
+
+
+Bài 16: 
+import math
+
+# Nhập chiều cao
+d = float(input("Nhập chiều cao thả vật (m): "))
+
+# Hằng số
+a = 9.8   # m/s^2
+v_i = 0   # m/s
+
+# Tính tốc độ cuối cùng
+v_f = math.sqrt(v_i**2 + 2 * a * d)
+
+# In kết quả
+print("Vận tốc khi chạm đất là: {:.2f} m/s".format(v_f))
+
+Bài 17: 
+import math
+
+# Nhập dữ liệu
+Ta = float(input("Nhập nhiệt độ không khí (°C): "))
+V = float(input("Nhập tốc độ gió (km/h): "))
+
+# Công thức tính chỉ số gió lạnh
+WCI = 13.12 + 0.6215 * Ta - 11.37 * (V ** 0.16) + 0.3965 * Ta * (V ** 0.16)
+
+# Làm tròn đến số nguyên gần nhất
+WCI_rounded = round(WCI)
+
+# Hiển thị kết quả
+print("Chỉ số gió lạnh (Wind Chill Index) là:", WCI_rounded)
+
+
+
+
+
+
